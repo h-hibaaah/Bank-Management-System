@@ -2,7 +2,6 @@
 #include <fstream>
 #include <cstdlib>
 using namespace std;
-
 class bank
 {
 protected:
@@ -14,24 +13,18 @@ protected:
     string accountno;
     string password;
     int choice;
-
 public:
-
     int getLastAccountNumber()
     {
         ifstream file("file.txt");
-
         string n, p, acc;
         int bal;
-
         int last = 1900;
-
         while(file >> n >> p >> acc >> bal)
         {
             string num = acc.substr(3);
             last = stoi(num);
         }
-
         file.close();
         return last;
     }
@@ -39,7 +32,6 @@ public:
     bool fileread(string uname, string accno, string pass)
     {
         ifstream file("file.txt");
-
         while(file >> name >> password >> accountno >> balance)
         {
             if(name == uname && accountno == accno && password == pass)
@@ -48,7 +40,6 @@ public:
                 return true;
             }
         }
-
         file.close();
         return false;
     }
@@ -57,7 +48,6 @@ public:
 class newaccount : public bank
 {
 public:
-
     void createaccount()
     {
         int count = getLastAccountNumber();
@@ -323,7 +313,6 @@ int main()
     newaccount obj;
     oldaccount obj1;
     forgot obj2;
-
     while(true)
     {
         cout << "\n========== BANK MANAGEMENT SYSTEM ==========\n";
