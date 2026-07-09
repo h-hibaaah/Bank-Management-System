@@ -1,6 +1,6 @@
 # Bank Management System
 
-A simple Bank Management System developed in C++ using Object-Oriented Programming (OOP) and File Handling.
+A simple Bank Management System developed in C++ using the conecept of Object-Oriented Programming (OOP) and File Handling of C++.
 
 ## Features
 
