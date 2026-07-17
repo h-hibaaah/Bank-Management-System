@@ -266,8 +266,7 @@ public:
         ofstream temp("temp.txt");
 
         string n, p, acc;
-        int bal;
-
+        int bal;
         bool found = false;
 
         while(file >> n >> p >> acc >> bal)
